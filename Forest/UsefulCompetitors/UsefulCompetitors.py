@@ -3,6 +3,7 @@
 # Ogres are attacking, while their peons are trying to steal your coins!
 # Let the peons pick up the poison, and only gather the coins and gems.
 
+
 while True:
     enemy = hero.findNearestEnemy()
     if enemy:
@@ -11,5 +12,5 @@ while True:
     # item = hero.findNearestItem()
     item = hero.findNearestItem()
     if item and item.type != 'poison':
-        hero.move(item.pos)
+        hero.moveXY(item.pos.x, item.pos.y)
         # Gather the item only if it is not poison.
